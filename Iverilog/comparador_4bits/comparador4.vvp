@@ -1,0 +1,49 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000227556827f0 .scope module, "comparador4" "comparador4" 2 12;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "A";
+    .port_info 1 /INPUT 4 "B";
+    .port_info 2 /OUTPUT 1 "AmaiorB";
+    .port_info 3 /OUTPUT 1 "AmenorB";
+    .port_info 4 /OUTPUT 1 "AigualB";
+o00000227556b6fd8 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0000022755682fe0_0 .net "A", 3 0, o00000227556b6fd8;  0 drivers
+v00000227557bb3a0_0 .net "AigualB", 0 0, L_00000227556b0930;  1 drivers
+v00000227557bab10_0 .net "AmaiorB", 0 0, L_00000227556b15b0;  1 drivers
+v00000227557bee60_0 .net "AmenorB", 0 0, L_00000227556b10b0;  1 drivers
+o00000227556b7098 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v00000227557bef00_0 .net "B", 3 0, o00000227556b7098;  0 drivers
+v0000022755682980_0 .net *"_ivl_0", 0 0, L_00000227556b1510;  1 drivers
+L_00000227556ffcd8 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0000022755682a20_0 .net/2u *"_ivl_10", 0 0, L_00000227556ffcd8;  1 drivers
+L_00000227556ffd20 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000022755682ac0_0 .net/2u *"_ivl_12", 0 0, L_00000227556ffd20;  1 drivers
+v00000227556b1470_0 .net *"_ivl_16", 0 0, L_00000227556b1650;  1 drivers
+L_00000227556ffd68 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v00000227556b1790_0 .net/2u *"_ivl_18", 0 0, L_00000227556ffd68;  1 drivers
+L_00000227556ffc48 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v00000227556b0f70_0 .net/2u *"_ivl_2", 0 0, L_00000227556ffc48;  1 drivers
+L_00000227556ffdb0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000227556b1010_0 .net/2u *"_ivl_20", 0 0, L_00000227556ffdb0;  1 drivers
+L_00000227556ffc90 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000227556b0890_0 .net/2u *"_ivl_4", 0 0, L_00000227556ffc90;  1 drivers
+v00000227556b0c50_0 .net *"_ivl_8", 0 0, L_00000227556b16f0;  1 drivers
+L_00000227556b1510 .cmp/gt 4, o00000227556b6fd8, o00000227556b7098;
+L_00000227556b15b0 .functor MUXZ 1, L_00000227556ffc90, L_00000227556ffc48, L_00000227556b1510, C4<>;
+L_00000227556b16f0 .cmp/gt 4, o00000227556b7098, o00000227556b6fd8;
+L_00000227556b10b0 .functor MUXZ 1, L_00000227556ffd20, L_00000227556ffcd8, L_00000227556b16f0, C4<>;
+L_00000227556b1650 .cmp/eq 4, o00000227556b6fd8, o00000227556b7098;
+L_00000227556b0930 .functor MUXZ 1, L_00000227556ffdb0, L_00000227556ffd68, L_00000227556b1650, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "comparador4.v";
