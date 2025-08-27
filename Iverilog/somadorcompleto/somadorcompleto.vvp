@@ -1,0 +1,41 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000024a40e22720 .scope module, "somadorcompleto" "somadorcompleto" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "cin";
+    .port_info 3 /OUTPUT 1 "s";
+    .port_info 4 /OUTPUT 1 "cout";
+o0000024a40e570c8 .functor BUFZ 1, C4<z>; HiZ drive
+o0000024a40e570f8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000024a40f7a910 .functor XOR 1, o0000024a40e570c8, o0000024a40e570f8, C4<0>, C4<0>;
+o0000024a40e57128 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000024a40e23040 .functor XOR 1, L_0000024a40f7a910, o0000024a40e57128, C4<0>, C4<0>;
+L_0000024a40e231a0 .functor AND 1, o0000024a40e570c8, o0000024a40e570f8, C4<1>, C4<1>;
+L_0000024a40f7ee40 .functor AND 1, o0000024a40e570c8, o0000024a40e57128, C4<1>, C4<1>;
+L_0000024a40f7eeb0 .functor OR 1, L_0000024a40e231a0, L_0000024a40f7ee40, C4<0>, C4<0>;
+L_0000024a40f7ef20 .functor AND 1, o0000024a40e570f8, o0000024a40e57128, C4<1>, C4<1>;
+L_0000024a40e508f0 .functor OR 1, L_0000024a40f7eeb0, L_0000024a40f7ef20, C4<0>, C4<0>;
+v0000024a40f7a870_0 .net *"_ivl_0", 0 0, L_0000024a40f7a910;  1 drivers
+v0000024a40e228b0_0 .net *"_ivl_10", 0 0, L_0000024a40f7ef20;  1 drivers
+v0000024a40e22950_0 .net *"_ivl_4", 0 0, L_0000024a40e231a0;  1 drivers
+v0000024a40e229f0_0 .net *"_ivl_6", 0 0, L_0000024a40f7ee40;  1 drivers
+v0000024a40e22a90_0 .net *"_ivl_8", 0 0, L_0000024a40f7eeb0;  1 drivers
+v0000024a40f7eb20_0 .net "a", 0 0, o0000024a40e570c8;  0 drivers
+v0000024a40f7ebc0_0 .net "b", 0 0, o0000024a40e570f8;  0 drivers
+v0000024a40f7ec60_0 .net "cin", 0 0, o0000024a40e57128;  0 drivers
+v0000024a40f7ed00_0 .net "cout", 0 0, L_0000024a40e508f0;  1 drivers
+v0000024a40f7eda0_0 .net "s", 0 0, L_0000024a40e23040;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "somadorcompleto.v";
