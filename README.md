@@ -20,4 +20,9 @@ Os outros arquivos serão gerados pelas seguinte linhas de comando que deverão 
 
 Após a execução desses comandos, abrirá uma janela do gtkwave com as entradas e saídas em formas de onda na simulação.
 
+## VHDL
+Inicialmente é necessária a instalação de dois links, o primeiro é o do VHDL: https://github.com/ghdl/ghdl/releases/tag/v5.1.1 <br>
+O segundo é do gtkwave: https://gtkwave.sourceforge.net/ <br>
+
+Após a instalação dos links acima, 
 
