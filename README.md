@@ -23,8 +23,8 @@ Os outros arquivos serão gerados pelas seguinte linhas de comando que deverão 
 Após a execução desses comandos, ficará um somatório de 5 arquivos e abrirá uma janela do gtkwave com as entradas e saídas em formas de onda na simulação.
 
 ## VHDL
-Inicialmente é necessária a instalação de dois links, o primeiro é o do VHDL: https://github.com/ghdl/ghdl/releases/tag/v5.1.1 <br>
-O segundo é do gtkwave: https://gtkwave.sourceforge.net/ <br>
+Inicialmente é necessária a instalação de dois links, o primeiro é o do ***VHDL***: https://github.com/ghdl/ghdl/releases/tag/v5.1.1 <br>
+O segundo é do ***gtkwave***: https://gtkwave.sourceforge.net/ <br>
 
 Após a instalação dos links acima, deve-se copiar as duas pastas para o disco C e descompactá-las. A partir disso, é necessário copiar o caminho até o bin de cada pasta e colar no path das variáveis de sistema. Após isso, o programa já poderá ser executado no VsCode. Os arquivos serão .vhd e deverão, assim como no iverilog, ser dois, um principal e um tb de teste band.<br>
 
