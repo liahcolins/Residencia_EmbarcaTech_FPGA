@@ -36,4 +36,4 @@ Novamente, os outros arquivos serão gerados após as seguintes linhas de comand
 >***ghdl -r tb_nomedoarquivo --vcd=onda.vcd <br>***
 >***gtkwave onda.vcd <br>***
 
-Ao finalizar a execução dos comandos, a pasta deverá ter 4 arquivos e o gtkwave deve ter iniciado. Assim, a execução terá sido bem sucedida.
+Ao finalizar a execução dos comandos, a pasta deverá ter 4 arquivos e o gtkwave deve ter iniciado. Assim, a execução terá sido bem sucedida. Caso o arquivo vcd esteja ficando muito grande, podemos adicionar --stop-time=120ns antes de --vcd=onda.vcd, assim o arquivo rodará normalmente, sem problemas.
