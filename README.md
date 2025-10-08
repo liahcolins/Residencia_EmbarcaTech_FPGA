@@ -37,3 +37,19 @@ Novamente, os outros arquivos serão gerados após as seguintes linhas de comand
 >***gtkwave onda.vcd <br>***
 
 Ao finalizar a execução dos comandos, a pasta deverá ter 4 arquivos e o gtkwave deve ter iniciado. Assim, a execução terá sido bem sucedida. Caso o arquivo vcd esteja ficando muito grande, podemos adicionar --stop-time=120ns antes de --vcd=onda.vcd, assim o arquivo rodará normalmente, sem problemas.
+
+##System Verilog
+Anteriormente, é necessário baixar todos os programas, como o ***Lattice Diamond***, e fazer todas as ***configurações*** necessárias. Após isso você terá duas opções, executar pelo ***VsCode*** ou pelo ***Lattice Diamond***. Em ambos, serão necessários três arquivos:<br>
+
+1. Um arquivo principal, onde será feito a estrutura e lógica do código: ***nomedoarquivo.sv*** <br>
+2. Um arquivo colorlight que referencia todas entradas e saídas associando-as aos pinos do FPGA: ***colorlight_i9.lpf*** <br>
+3. Um arquivo bat referenciando os outros arquivos e configurando o projeto: ***flash_openfpgaloader.bat*** <br>
+
+### VsCode:
+Obtendo os três arquivos, podemos rodar no terminal do VsCode o arquivo .bat, basta digitá-lo no cmd com a placa conectada que os arquivos adicionais (.ldf, .bit, etc) serão gerados e logo em seguida, o código será passado para a placa e executado.
+
+OBS: O nome dado ao **module** no arquivo .sv deve ser o mesmo nome deste arquivo e, também, o mesmo nome referenciado em "set TOP=" no arquivo .bat.
+
+### Lattice Diamond
+Abra o Lattice -> new -> project -> escreva o nome do arquivo, com o mesmo nome do impl declarado no arquivo .bat -> selecione o arquivo ->
+
