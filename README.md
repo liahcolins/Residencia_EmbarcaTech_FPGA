@@ -38,7 +38,7 @@ Novamente, os outros arquivos serão gerados após as seguintes linhas de comand
 
 Ao finalizar a execução dos comandos, a pasta deverá ter 4 arquivos e o gtkwave deve ter iniciado. Assim, a execução terá sido bem sucedida. Caso o arquivo vcd esteja ficando muito grande, podemos adicionar --stop-time=120ns antes de --vcd=onda.vcd, assim o arquivo rodará normalmente, sem problemas.
 
-##System Verilog
+## System Verilog
 Anteriormente, é necessário baixar todos os programas, como o ***Lattice Diamond***, e fazer todas as ***configurações*** necessárias. Após isso você terá duas opções, executar pelo ***VsCode*** ou pelo ***Lattice Diamond***. Em ambos, serão necessários três arquivos:<br>
 
 1. Um arquivo principal, onde será feito a estrutura e lógica do código: ***nomedoarquivo.sv*** <br>
